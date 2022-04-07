@@ -7,13 +7,13 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     container:
-      image: zmkfirmware/zmk-build-arm:stable
+      image: zmkfirmware/zmk-build-arm:2.4
     strategy:
       fail-fast: false
       matrix:
         include:
           - shield: murphpad
-            board: nice_nano
+            board: nice_nano_v2
     steps:
       - name: Checkout
         uses: actions/checkout@v2
